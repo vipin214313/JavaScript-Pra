@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function demo() {
+    // Function scope variable
+    var a = 10;        // function-scoped
+    let b = 20;        // block-scoped (but inside function)
+    const c = 30;      // block-scoped (but inside function)
+console.log("Inside function: a =", a, ", b =", b, ", c =", c);
+if (true) {
+        var a2 = 100;   // var -> leaks outside block
+        let b2 = 200;   // let -> only inside this block
+        const c2 = 300; // const -> only inside this block
+console.log("Inside block: a2 =", a2, ", b2 =", b2, ", c2 =", c2);
+    }
+// Here, 'a2' is still accessible because var ignores block  becaiuse var fumction scope inside function var ignore block
+    console.log("Outside block (inside fn): a2 =", a2);  // ✅ works
+    // console.log(b2);  //  Error: b2 not defined
+    // console.log(c2);  //  Error: c2 not defined
+}
+demo();
+// console.log(a); //  Error: not accessible outside function
+// console.log(b); //  Error
+// console.log(c); //  Error
+
+    </script>
+    
+</body>
+</html>
