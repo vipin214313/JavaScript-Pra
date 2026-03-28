@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive data types</title>
+</head>
+<body>
+    <script>
+        //String
+        let name="jhon";
+        let greeting='hellow, '+name;
+        console.log(greeting);
+
+        //number
+        let age=25;
+        let price=500;
+        console.log(age+price);
+        console.log(price/4);
+        //boolean
+        let isActive=true;
+        let isComplet=false;
+        console.log(isActive);
+        console.log(isComplet);
+        //undefined
+        let x;
+        console.log(x);
+        //null
+        let persion=null;
+        console.log(persion);
+
+        //symbol
+        const uniqueID=Symbol("id");
+        const obj={
+            [uniqueID]:"1234"
+        };
+        console.log(obj[uniqueID]);
+
+        //bigInt
+        const largeNumber=1234567890126466666n;
+        console.log(largeNumber);
+    </script>
+    
+</body>
+</html>

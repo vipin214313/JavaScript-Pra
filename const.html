@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const -blocked scope and u can not updates and not redeclared in samme scope</title>
+</head>
+<body>
+    <script>
+        const a=50;//global varia
+        function varex(){
+            console.log(a);
+            var b=20;
+            console.log(b);
+        }
+        varex();
+        // console.log(b);//refrence error
+    </script>
+    
+</body>
+</html>

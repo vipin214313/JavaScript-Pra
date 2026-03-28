@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let-block scope follow u can updated values but not redeclared allowed</title>
+</head>
+<body>
+    <script>
+        if(true){
+            let a=20;
+            console.log(a);
+        }
+        // console.log(a);//refrence error
+        let b=15;
+        console.log(b);
+        b=50; //updaes are allowed
+        console.log(b);
+        //hosting
+        // console.log(z);//refrence error
+        let z=20;
+        console.log(z);
+        // let z=26;//not allowed
+    </script>
+    
+</body>
+</html>
