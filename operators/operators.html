@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Score Counter Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 { color: #2c3e50; }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    #score {
+      font-size: 24px;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1> Score Counter Game</h1>
+  <button onclick="preIncrement()">Pre-Increment (++score)</button>
+  <button onclick="postIncrement()">Post-Increment (score++)</button>
+  <button onclick="preDecrement()">Pre-Decrement (--score)</button>
+  <button onclick="postDecrement()">Post-Decrement (score--)</button>
+<div id="score">Score: 0</div>
+<script>
+    let score = 0;
+function updateScore() {
+      document.getElementById("score").innerText = "Score: " + score;
+    }
+// Pre-Increment
+    function preIncrement() {
+      let result = ++score;
+      console.log("Pre-Increment: result =", result, "score =", score);
+      updateScore();
+    }
+// Post-Increment
+    function postIncrement() {
+      let result = score++;
+      console.log("Post-Increment: result =", result, "score =", score);
+      updateScore();
+    }
+// Pre-Decrement
+    function preDecrement() {
+      let result = --score;
+      console.log("Pre-Decrement: result =", result, "score =", score);
+      updateScore();
+    }
+// Post-Decrement
+    function postDecrement() {
+      let result = score--;
+      console.log("Post-Decrement: result =", result, "score =", score);
+      updateScore();
+    }
+  </script>
+</body>
+</html>

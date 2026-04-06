@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables examples-var</title>
+
+</head>
+<body>
+    <h1>var is follow the function scope and globa scope</h1>
+    <script>
+        var a=50;
+        var a=30;
+        function myfun(){
+            var data=500;
+            console.log(data);
+            console.log(a);
+            data=700;
+            if(true){
+                console.log(a);
+                console.log(data);
+            }
+
+
+        }
+        myfun();
+    </script>
+    
+</body>
+</html>
