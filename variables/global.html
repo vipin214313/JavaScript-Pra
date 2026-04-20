@@ -11,12 +11,14 @@
 var g1 = " I am Global (via var)";
 let g2 = " I am Global (via let)";
 const g3 = " I am Global (via const)";
+const g4="i am a global variables";
 
 function showGlobals() {
     console.log("Inside function:");
     console.log("g1 =", g1);  //  Accessible
     console.log("g2 =", g2);  //  Accessible
     console.log("g3 =", g3);  //  Accessible
+    console.log(g4);
 }
 
 // 2. Global variable via window object (Browser only)
